@@ -1,0 +1,30 @@
+{
+  "name": "node-red-tomato-detector",
+  "version": "1.0.0",
+  "description": "TBD",
+  "main": "build/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist build",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "node-red"
+  ],
+  "node-red": {
+    "nodes": {
+      "tomato-detector": "dist/tomato-detector.js"
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/node-red": "^1.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@tensorflow-models/mobilenet": "^2.1.1",
+    "@tensorflow/tfjs-node": "^4.22.0",
+    "sharp": "^0.34.1"
+  }
+}
